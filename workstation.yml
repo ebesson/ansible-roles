@@ -5,35 +5,41 @@
     - name: Install common packages with apt
       sudo: yes
       apt:
-	name={{ item }}
-	state=latest
-	update_cache=yes
+         name={{ item }}
+         state=latest
+         update_cache=yes
       with_items:
         - git
         - git-gui
-	- wget
+        - wget
         - curl
         - htop
         - zip
         - unzip
         - vim
         - terminator
-	- tmux
-	- zsh
-	- python-dev
+        - tmux
+        - zsh
+        - python-dev
         - python-pip
+        - libffi-dev
+        - libssl-dev
       when: ansible_os_family == 'Debian'
     - name: Install common packages with pip
       sudo: yes
-      pip: name={{ item }}
-      with_items: pip_utilitaires
+      pip: 
+        name={{ item }}
       with_items:
-	- ansible
-	- git-up
-	- httpie
-	- virtualenv
-	- virtualenvwrapper
-	- magpie
+        - ansible
+        - git-up
+        - httpie
+        - virtualenv
+        - virtualenvwrapper
+        - magpie
+        - pdb
+        - tox 
+        - testrepository
+        - docker-compose
       when: ansible_os_family == 'Debian'
   roles:
     - docker

@@ -5,6 +5,8 @@
     update_cache: yes
     cache_valid_time: 600
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
 
 - name: Add Docker repository key
   apt_key:
@@ -12,6 +14,8 @@
     keyserver: "hkp://keyserver.ubuntu.com:80"
     state: present
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
 
 - name: Add Docker repository and update apt cache
   apt_repository:
@@ -19,6 +23,8 @@
     update_cache: yes
     state: present
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
 
 - name: Install docker package
   apt: 
@@ -29,6 +35,8 @@
   notify:
     - Restart docker
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
 
 - name: Create Docker group
   group:
@@ -36,6 +44,8 @@
     state: present
   sudo: yes
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
 
 - name: Add current user to docker group
   user:
@@ -44,3 +54,5 @@
     append: yes
   sudo: yes
   when: ansible_os_family == 'Debian'
+  tags:
+    - docker
