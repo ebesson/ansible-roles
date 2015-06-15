@@ -1,0 +1,39 @@
+---
+- hosts: localhost
+  connection: local
+  pre_tasks:
+    - name: Install common packages with apt
+      sudo: yes
+      apt:
+	name={{ item }}
+	state=latest
+	update_cache=yes
+      with_items:
+        - git
+        - git-gui
+	- wget
+        - curl
+        - htop
+        - zip
+        - unzip
+        - vim
+        - terminator
+	- tmux
+	- zsh
+	- python-dev
+        - python-pip
+      when: ansible_os_family == 'Debian'
+    - name: Install common packages with pip
+      sudo: yes
+      pip: name={{ item }}
+      with_items: pip_utilitaires
+      with_items:
+	- ansible
+	- git-up
+	- httpie
+	- virtualenv
+	- virtualenvwrapper
+	- magpie
+      when: ansible_os_family == 'Debian'
+  roles:
+    - docker

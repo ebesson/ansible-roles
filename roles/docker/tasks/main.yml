@@ -1,0 +1,46 @@
+- name: Install apt-transport-https
+  apt:
+    pkg: apt-transport-https
+    state: present
+    update_cache: yes
+    cache_valid_time: 600
+  when: ansible_os_family == 'Debian'
+
+- name: Add Docker repository key
+  apt_key:
+    id: "36A1D7869245C8950F966E92D8576A8BA88D21E9"
+    keyserver: "hkp://keyserver.ubuntu.com:80"
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Add Docker repository and update apt cache
+  apt_repository:
+    repo: "deb https://get.docker.com/ubuntu docker main"
+    update_cache: yes
+    state: present
+  when: ansible_os_family == 'Debian'
+
+- name: Install docker package
+  apt: 
+    name: "lxc-docker"
+    state: latest
+    update_cache: yes
+    cache_valid_time: 600
+  notify:
+    - Restart docker
+  when: ansible_os_family == 'Debian'
+
+- name: Create Docker group
+  group:
+    name: docker
+    state: present
+  sudo: yes
+  when: ansible_os_family == 'Debian'
+
+- name: Add current user to docker group
+  user:
+    name: "{{ansible_ssh_user}}"
+    groups: docker
+    append: yes
+  sudo: yes
+  when: ansible_os_family == 'Debian'
