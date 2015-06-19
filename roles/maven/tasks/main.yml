@@ -1,0 +1,35 @@
+- name: Download maven binary
+  get_url:
+    url: http://wwwftp.ciril.fr/pub/apache/maven/maven-3/{{version}}/binaries/apache-maven-{{version}}-bin.tar.gz
+    dest: /tmp/maven_{{version}}.zip
+  tags:
+    - maven
+
+- name: Unarchive maven binary
+  unarchive:
+    src: /tmp/maven_{{version}}.zip
+    dest: /opt
+    creates: /opt/apache-maven-{{version}}/maven
+    copy: no
+  sudo: yes
+  tags:
+    - maven
+
+- name: Create link from /opt/maven to the maven versionned directory
+  file:
+    dest: /opt/maven
+    src: /opt/apache-maven-{{version}}
+    force: yes
+    state: link
+  sudo: yes
+  tags:
+    - maven
+
+- name: Adding maven command to user path
+  file:
+    src: /opt/maven/bin/mvn
+    dest: /usr/bin/mvn
+    state: link
+  sudo: yes
+  tags:
+    - maven
