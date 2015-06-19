@@ -1,0 +1,19 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"AngularJS",
+		"Ansible",
+		"Console Exec",
+		"Djaneiro",
+		"Docker Based Build Systems",
+		"Dockerfile Syntax Highlighting",
+		"Git",
+		"Markdown Preview",
+		"Package Control",
+		"SFTP"
+	]
+}
