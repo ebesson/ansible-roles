@@ -1,0 +1,22 @@
+---
+atom_packages:
+  # General packages
+  - autocomplete-paths
+  - autocomplete-plus
+  - autocomplete-python
+  - atom-jinja2
+  - asciidoc-preview
+  - ansible-snippets
+  - atom-monokai
+  - git-plus
+  - rst-preview
+  # Linter packages
+  - linter
+  - linter-js-yaml
+  - linter-shellcheck
+  - linter-ansible-lint
+  # Languages syntax packages
+  - language-docker
+  - language-ini
+  - language-nginx
+  - language-ansible

@@ -1,0 +1,23 @@
+---
+- name: Download atom deb
+  get_url:
+    url: https://atom.io/download/deb
+    dest: /tmp/atom.deb
+  when: ansible_os_family == 'Debian'
+  
+- name: Install atom deb
+  sudo: yes
+  apt:
+    deb: /tmp/atom.deb
+  when: ansible_os_family == 'Debian'
+
+- name: Ensure atom config directory exists
+  file:
+    path: ~/.atom
+    state: directory
+
+- name: Install atom packages with apm
+  apm:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{atom_packages}}"
