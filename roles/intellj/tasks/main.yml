@@ -1,37 +1,36 @@
  #- name: Download Intellj
- # get_url: 
+ # get_url:
  #   url=https://download.jetbrains.com/idea/ideaIC-14.1.1.tar.gz
  #   dest=/tmp/
  # tags:
  #   - intellj
 
 - name: Install Intellj
-  sudo: yes
+  become: yes
   shell: tar -xvzf /tmp/ideaIC-14.1.1.tar.gz -C /opt
   tags:
     - intellj
 
 - name: Install Intellj
-  sudo: yes
+  become: yes
   shell: mkdir -p /opt/idea/
   tags:
     - intellj
 
 - name: Move files to /opt/idea/
-  sudo: yes
+  become: yes
   shell: cp -r /opt/idea-*/* /opt/idea/
   tags:
     - intellj
 
 - name: Change rights on directory /opt/idea
-  sudo: yes
+  become: yes
   shell: chmod -R +r /opt/idea
   tags:
     - intellj
 
-- name: Add Intellj on directory /etc/profile.d 
-  sudo: yes
+- name: Add Intellj on directory /etc/profile.d
+  become: yes
   shell: ln -s /opt/idea/bin/idea.sh /usr/local/bin/
   tags:
     - intellj
-

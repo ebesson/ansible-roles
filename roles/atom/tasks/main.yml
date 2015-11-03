@@ -4,9 +4,9 @@
     url: https://atom.io/download/deb
     dest: /tmp/atom.deb
   when: ansible_os_family == 'Debian'
-  
+
 - name: Install atom deb
-  sudo: yes
+  become: yes
   apt:
     deb: /tmp/atom.deb
   when: ansible_os_family == 'Debian'

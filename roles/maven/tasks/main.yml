@@ -11,7 +11,7 @@
     dest: /opt
     creates: /opt/apache-maven-{{version}}/maven
     copy: no
-  sudo: yes
+  become: yes
   tags:
     - maven
 
@@ -21,7 +21,7 @@
     src: /opt/apache-maven-{{version}}
     force: yes
     state: link
-  sudo: yes
+  become: yes
   tags:
     - maven
 
@@ -30,6 +30,6 @@
     src: /opt/maven/bin/mvn
     dest: /usr/bin/mvn
     state: link
-  sudo: yes
+  become: yes
   tags:
     - maven

@@ -1,5 +1,5 @@
 - name: Install common packages with apt
-  sudo: yes
+  become: yes
   apt:
      name={{ item }}
      state=latest
@@ -21,8 +21,8 @@
   when: ansible_os_family == 'Debian'
 
 - name: Install common packages with pip
-  sudo: yes
-  pip: 
+  become: yes
+  pip:
     name={{ item }}
     state=latest
   with_items:
@@ -33,14 +33,14 @@
     - virtualenvwrapper
     - magpie
     - pdb
-    - tox 
+    - tox
     - testrepository
 
   when: ansible_os_family == 'Debian'
 
 - name: Install docker-compose
-  sudo: yes
-  pip: 
+  become: yes
+  pip:
     name=docker-compose
     version=1.2.0
   when: ansible_os_family == 'Debian'

@@ -3,7 +3,7 @@
   connection: local
   pre_tasks:
     - name: Install bases packages with apt
-      sudo: yes
+      become: yes
       apt:
          name={{ item }}
          state=latest

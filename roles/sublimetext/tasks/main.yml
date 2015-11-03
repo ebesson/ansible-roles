@@ -4,10 +4,10 @@
     - sublimetext
 
 - name: Install sublimetext for Debian family OS
-  sudo: true
+  become: true
   apt: deb=/tmp/sublime-text_build-3083_amd64.deb
   tags:
     - sublimetext
 
-- name : Copy user profile 
+- name : Copy user profile
   copy: src=User dest=/home/{{ ansible_user_id }}/.config/sublime-text-3/Packages/ owner={{ ansible_user_id }}

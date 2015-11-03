@@ -27,7 +27,7 @@
     - docker
 
 - name: Install docker package
-  apt: 
+  apt:
     name: "lxc-docker"
     state: latest
     update_cache: yes
@@ -42,7 +42,7 @@
   group:
     name: docker
     state: present
-  sudo: yes
+  become: yes
   when: ansible_os_family == 'Debian'
   tags:
     - docker
@@ -52,7 +52,7 @@
     name: "{{ansible_ssh_user}}"
     groups: docker
     append: yes
-  sudo: yes
+  become: yes
   when: ansible_os_family == 'Debian'
   tags:
     - docker
