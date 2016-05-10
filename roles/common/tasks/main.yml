@@ -44,5 +44,4 @@
   become: yes
   pip:
     name=docker-compose
-    version=1.2.0
   when: ansible_os_family == 'Debian'
