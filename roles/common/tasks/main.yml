@@ -21,6 +21,8 @@
     - keepassx
     - sshpass
   when: ansible_os_family == 'Debian'
+  tags:
+    - role::common
 
 - name: Install common packages with pip
   become: yes
@@ -37,11 +39,14 @@
     - pdb
     - tox
     - testrepository
-
   when: ansible_os_family == 'Debian'
+  tags:
+    - role::common
 
 - name: Install docker-compose
   become: yes
   pip:
     name=docker-compose
   when: ansible_os_family == 'Debian'
+  tags:
+    - role::common
