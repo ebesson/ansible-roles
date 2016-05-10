@@ -1,24 +1,25 @@
 - name: Download Pycharm
-  get_url: 
-    url=http://download.jetbrains.com/python/pycharm-community-4.5.1.tar.gz
-    dest=/tmp/
+  get_url:
+    url: http://download.jetbrains.com/python/pycharm-community-{{pycharm_version}}.tar.gz
+    validate_certs: False
+    dest: /tmp/
   tags:
     - pycharm
 
 - name: Install Pycharm
   sudo: yes
-  shell: tar -xvzf /tmp/pycharm-community-4.5.1.tar.gz -C /opt
+  shell: tar -xvzf /tmp/pycharm-community-{{pycharm_version}}.tar.gz -C /opt
   tags:
     - pycharm
 
 - name: Change rights on Pycharm
   sudo: yes
-  shell: chmod -R +r /opt/pycharm-community-4.5.1
+  shell: chmod -R +r /opt/pycharm-community-{{pycharm_version}}
   tags:
     - pycharm
 
-- name: Add Pycharm on directory /etc/profile.d 
+- name: Add Pycharm on directory /etc/profile.d
   sudo: yes
-  shell: ln -s /opt/pycharm-community-4.5.1/bin/pycharm.sh /usr/local/bin/
+  shell: ln -s /opt/pycharm-community-{{pycharm_version}}/bin/pycharm.sh /usr/local/bin/
   tags:
     - pycharm
