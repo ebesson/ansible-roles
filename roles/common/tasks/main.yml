@@ -19,6 +19,7 @@
     - libffi-dev
     - libssl-dev
     - keepassx
+    - sshpass
   when: ansible_os_family == 'Debian'
 
 - name: Install common packages with pip
