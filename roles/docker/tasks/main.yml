@@ -1,42 +1,22 @@
-- name: Install apt-transport-https
-  apt:
-    pkg: apt-transport-https
-    state: present
-    update_cache: yes
-    cache_valid_time: 600
-  when: ansible_os_family == 'Debian'
+- name: Load docker setup file and install
+  shell: curl -sSL https://get.docker.com/ | sh
   tags:
     - docker
 
-- name: Add Docker repository key
-  apt_key:
-    id: "36A1D7869245C8950F966E92D8576A8BA88D21E9"
-    keyserver: "hkp://keyserver.ubuntu.com:80"
-    state: present
-  when: ansible_os_family == 'Debian'
-  tags:
-    - docker
+- name: Check if logrotate configuration for docker exists
+  stat:
+    path: "/etc/logrotate.d/docker-container"
+  register: logrotate_docker_status
 
-- name: Add Docker repository and update apt cache
-  apt_repository:
-    repo: "deb https://get.docker.com/ubuntu docker main"
-    update_cache: yes
-    state: present
-  when: ansible_os_family == 'Debian'
-  tags:
-    - docker
-
-- name: Install docker package
-  apt:
-    name: "lxc-docker"
-    state: latest
-    update_cache: yes
-    cache_valid_time: 600
+- name: configure logrotate for docker
+  copy:
+    src: docker-container
+    dest: /etc/logrotate.d/docker-container
+    owner: root
+    mode: 0644
   notify:
-    - Restart docker
-  when: ansible_os_family == 'Debian'
-  tags:
-    - docker
+      - "restart logrotate"
+  when: not logrotate_docker_status.stat.exists
 
 - name: Create Docker group
   group:
@@ -49,7 +29,7 @@
 
 - name: Add current user to docker group
   user:
-    name: "{{ansible_ssh_user}}"
+    name: "{{ansible_user}}"
     groups: docker
     append: yes
   become: yes
