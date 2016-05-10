@@ -1,4 +1,4 @@
-- name: Add repository ppa:webupd8team/jav
+- name: Add repository ppa:webupd8team/java
   become: yes
   apt_repository: repo='ppa:webupd8team/java'
   when:
