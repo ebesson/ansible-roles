@@ -1,0 +1,15 @@
+---
+- name : Add Zeal ppa
+  apt_repository:
+    repo: "ppa:zeal-developers/ppa"
+    state: present
+  tags:
+    - zeal
+
+- name : Install zeal
+  apt:
+    name: zeal
+    state: present
+    update_cache: true
+  tags:
+    - zeal
