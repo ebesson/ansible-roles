@@ -39,6 +39,7 @@
     - pdb
     - tox
     - testrepository
+    - pipdeptree
   when: ansible_os_family == 'Debian'
   tags:
     - role::common
