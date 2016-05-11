@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   connection: local
+  become: yes
   pre_tasks:
     - name: Install bases packages with apt
       become: yes
