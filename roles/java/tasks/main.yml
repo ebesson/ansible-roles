@@ -1,30 +1,11 @@
-- name: Add repository ppa:webupd8team/java
-  become: yes
-  apt_repository: repo='ppa:webupd8team/java'
-  when:
-    - ansible_os_family == 'Debian'
-  tags:
-    - java
+---
 
-- name: Update package
-  shell: apt-get update
+- name: Install openjdk-8-jdk
   become: yes
-  when:
-    - ansible_os_family == 'Debian'
-  tags:
-    - java
-
-- name: Accept  Oracle JDK license
-  shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-  become: yes
-  when:
-    - ansible_os_family == 'Debian'
-  tags:
-    - java
-
-- name: Install du JDK
-  become: yes
-  apt: name=oracle-java8-installer state=present update_cache=yes
+  apt:
+    name: openjdk-8-jdk
+    state: present 
+    update_cache: yes
   when:
     - ansible_os_family == 'Debian'
   tags:
