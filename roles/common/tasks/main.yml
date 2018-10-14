@@ -1,3 +1,4 @@
+---
 - name: Install common packages with apt
   become: yes
   apt:
@@ -18,7 +19,6 @@
     - python-pip
     - libffi-dev
     - libssl-dev
-    - keepassx
     - sshpass
   when: ansible_os_family == 'Debian'
   tags:
@@ -35,10 +35,7 @@
     - httpie
     - virtualenv
     - virtualenvwrapper
-    - magpie
-    - pdb
     - tox
-    - testrepository
     - pipdeptree
   when: ansible_os_family == 'Debian'
   tags:
