@@ -1,14 +1,13 @@
 ---
 - hosts: all
-  connection: local
   become: yes
   pre_tasks:
     - name: Install bases packages with apt
       become: yes
       apt:
-         name={{ item }}
-         state=latest
-         update_cache=yes
+        name: "{{ item }}"
+        state: latest
+        update_cache: yes
       with_items:
         - wget
         - curl
