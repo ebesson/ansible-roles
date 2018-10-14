@@ -15,12 +15,12 @@
       when: ansible_os_family == 'Debian'
   roles:
     - common
-    - docker
+#    - docker
     - java
-    - maven
-    - pycharm
-    - sublimetext
-    - intellj
-    - atom
+#    - maven
+#    - pycharm
+#    - sublimetext
+#    - intellj
+#    - atom
     - zeal
-    - dbeaver
+#    - dbeaver
