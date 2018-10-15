@@ -1,0 +1,10 @@
+---
+- name: powerline-go | download and install powerline-go
+  get_url:
+    url: "{{ powerlinego_url }}"
+    dest: "{{powerlinego_destination }}"
+    owner: root
+    group: root
+    mode: 755
+  tags:
+    - sshed

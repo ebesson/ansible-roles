@@ -1,0 +1,4 @@
+---
+powerlinego_version: 1.11.0
+powerlinego_url: "https://github.com/justjanne/powerline-go/releases/download/v{{ powerlinego_version }}/powerline-go-linux-amd64"
+powerlinego_destination: /usr/local/bin/powerline-go
