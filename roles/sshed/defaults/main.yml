@@ -1,0 +1,4 @@
+---
+sshed_version: 1.0.4
+sshed_url: "https://github.com/trntv/sshed/releases/download/{{ sshed_version }}/sshed-{{ sshed_version }}-linux-amd64"
+sshed_destination: /usr/local/bin/sshed
