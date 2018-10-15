@@ -1,0 +1,33 @@
+---
+- name: vscodium | download and install vscodium
+  apt:
+    deb: "{{ vscodium_url }}"
+  tags:
+    - vscodium
+
+
+#- name: vscodium | download and install extension
+#  shell: vscodium --install-extension "{{ item }}"
+#  with_items:
+#    - deerawan.vscode-dash
+#    - dhoeric.ansible-vault
+#    - eamodio.gitlens
+#    - GrapeCity.gc-excelviewer
+#    - haaaad.ansible
+#    - jmMeessen.jenkins-declarative-support
+#    - joaompinto.asciidoctor-vscode
+#    - johnpapa.Angular2
+#    - mauve.terraform
+#    - miclo.sort-typescript-imports
+#    - MS-CEINTL.vscode-language-pack-fr
+#    - PeterJausovec.vscode-docker
+#    - sidneys1.gitconfig
+#    - SonarSource.sonarlint-vscode
+#    - steoates.autoimport
+#    - streetsidesoftware.code-spell-checker
+#    - streetsidesoftware.code-spell-checker-french
+#    - timonwong.shellcheck
+#    - vscoss.vscode-ansible
+#    - wholroyd.jinja
+#  tags:
+#    - vscodium
