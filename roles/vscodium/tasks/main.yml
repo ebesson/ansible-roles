@@ -6,7 +6,7 @@
     - vscodium
 
 
-#- name: vscodium | download and install extension
+# - name: vscodium | download and install extension
 #  shell: vscodium --install-extension "{{ item }}"
 #  with_items:
 #    - deerawan.vscode-dash

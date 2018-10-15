@@ -1,6 +1,7 @@
+---
 - name: Download maven binary
   get_url:
-    url: http://wwwftp.ciril.fr/pub/apache/maven/maven-3/{{version}}/binaries/apache-maven-{{version}}-bin.tar.gz
+    url: http://mirrors.standaloneinstaller.com/apache/maven/maven-3/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.zip
     dest: /tmp/maven_{{version}}.zip
   tags:
     - maven

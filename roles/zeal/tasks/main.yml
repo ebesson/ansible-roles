@@ -1,12 +1,12 @@
 ---
-- name : Add Zeal ppa
+- name: zeal | add Zeal ppa
   apt_repository:
     repo: "ppa:zeal-developers/ppa"
     state: present
   tags:
     - zeal
 
-- name : Install zeal
+- name: zeal | install zeal
   apt:
     name: zeal
     state: present

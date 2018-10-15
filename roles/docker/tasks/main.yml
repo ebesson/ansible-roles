@@ -1,3 +1,4 @@
+---
 - name: Load docker setup file and install
   shell: curl -sSL https://get.docker.com/ | sh
   tags:
@@ -15,7 +16,7 @@
     owner: root
     mode: 0644
   notify:
-      - "restart logrotate"
+    - "restart logrotate"
   when: not logrotate_docker_status.stat.exists
 
 - name: Create Docker group
@@ -29,7 +30,7 @@
 
 - name: Add current user to docker group
   user:
-    name: "{{ansible_user}}"
+    name: "{{ ansible_user }}"
     groups: docker
     append: yes
   become: yes

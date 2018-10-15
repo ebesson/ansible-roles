@@ -12,19 +12,19 @@
         - wget
         - curl
         - python-pip
+        - tar
+        - unzip
       when: ansible_os_family == 'Debian'
   roles:
     - common
-#    - docker
+# - docker
     - sshed
     - lazygit
     - java
-#    - maven
+# - maven
     - pycharm
-#    - sublimetext
     - intellj
-#    - atom
     - powerline-go
     - vscodium
     - zeal
-#    - dbeaver
+# - dbeaver

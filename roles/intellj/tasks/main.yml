@@ -1,37 +1,38 @@
+---
 - name: Download Intellj
   get_url:
      url: https://download.jetbrains.com/idea/ideaIC-{{intellj_version}}.tar.gz
      validate_certs: False
      dest: /tmp/
   tags:
-    - intellj
+     - intellj
 
 - name: Install Intellj
   become: yes
   shell: tar -xvzf /tmp/ideaIC-{{intellj_version}}.tar.gz -C /opt
   tags:
-    - intellj
+     - intellj
 
 - name: Install Intellj
   become: yes
   shell: mkdir -p /opt/idea/
   tags:
-    - intellj
+     - intellj
 
 - name: Move files to /opt/idea/
   become: yes
   shell: cp -r /opt/idea-*/* /opt/idea/
   tags:
-    - intellj
+     - intellj
 
 - name: Change rights on directory /opt/idea
   become: yes
   shell: chmod -R +r /opt/idea
   tags:
-    - intellj
+     - intellj
 
 - name: Add Intellj on directory /etc/profile.d
   become: yes
   shell: ln -s /opt/idea/bin/idea.sh /usr/local/bin/
   tags:
-    - intellj
+     - intellj

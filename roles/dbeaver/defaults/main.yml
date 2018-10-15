@@ -1,3 +1,4 @@
+---
 dbeaver_version: 3.6.6
 dbeaver_server: http://dbeaver.jkiss.org
 dbeaver_path: files/{{ dbeaver_version }}

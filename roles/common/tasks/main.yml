@@ -6,45 +6,45 @@
      state=latest
      update_cache=yes
   with_items:
-    - git
-    - git-gui
-    - htop
-    - zip
-    - unzip
-    - vim
-    - terminator
-    - tmux
-    - zsh
-    - python-dev
-    - python-pip
-    - libffi-dev
-    - libssl-dev
-    - sshpass
+     - git
+     - git-gui
+     - htop
+     - zip
+     - unzip
+     - vim
+     - terminator
+     - tmux
+     - zsh
+     - python-dev
+     - python-pip
+     - libffi-dev
+     - libssl-dev
+     - sshpass
   when: ansible_os_family == 'Debian'
   tags:
-    - role::common
+     - role::common
 
 - name: Install common packages with pip
   become: yes
   pip:
-    name: "{{ item }}"
-    state: latest
+     name: "{{ item }}"
+     state: latest
   with_items:
-    - ansible
-    - git-up
-    - httpie
-    - virtualenv
-    - virtualenvwrapper
-    - tox
-    - pipdeptree
+     - ansible
+     - git-up
+     - httpie
+     - virtualenv
+     - virtualenvwrapper
+     - tox
+     - pipdeptree
   when: ansible_os_family == 'Debian'
   tags:
-    - role::common
+     - role::common
 
 - name: Install docker-compose
   become: yes
   pip:
-    name: docker-compose
+     name: docker-compose
   when: ansible_os_family == 'Debian'
   tags:
-    - role::common
+     - role::common
