@@ -16,11 +16,15 @@
   roles:
     - common
 #    - docker
+    - sshed
+    - lazygit
     - java
 #    - maven
-#    - pycharm
+    - pycharm
 #    - sublimetext
-#    - intellj
+    - intellj
 #    - atom
+    - powerline-go
+    - vscodium
     - zeal
 #    - dbeaver
