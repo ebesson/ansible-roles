@@ -17,5 +17,4 @@ install:
   - sudo pip install testinfra==1.14.1
   - sudo pip install pylxd
 script:
-  - sudo molecule lint
   - sudo molecule converge
