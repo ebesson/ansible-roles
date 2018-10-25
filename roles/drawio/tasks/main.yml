@@ -1,0 +1,6 @@
+---
+- name: drawio | download and install drawio
+  apt:
+    deb: "{{ drawio_package_url }}"
+  tags:
+    - drawio
