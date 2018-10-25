@@ -17,14 +17,15 @@
       when: ansible_os_family == 'Debian'
   roles:
     - common
-# - docker
-    - sshed
-    - lazygit
+  # - docker
     - java
-# - maven
-    - pycharm
+    - dbeaver
+    - drawio
     - intellj
+    - lazygit
+  # - maven
     - powerline-go
+    - pycharm
+    - sshed
     - vscodium
     - zeal
-    - dbeaver
