@@ -18,6 +18,7 @@
   roles:
     - common
   # - docker
+    - fzf
     - java
     - dbeaver
     - drawio
