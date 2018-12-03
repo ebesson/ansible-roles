@@ -8,4 +8,4 @@
 	
 ## Developement status
 
-[![Build Status](https://travis-ci.org/ebesson/gansible-roles.svg?branch=master)](https://travis-ci.org/ebesson/ansible-roles/)
+[![Build Status](https://travis-ci.org/ebesson/ansible-roles.svg?branch=master)](https://travis-ci.org/ebesson/ansible-roles/)
