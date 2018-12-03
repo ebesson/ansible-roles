@@ -1,0 +1,11 @@
+---
+- name: fzf | retrieve fzf
+  git:
+    repo: "{{ fzf_url }}"
+    dest: "{{ fzf_destination }}"
+    version: "{{ fzf_version }}"
+
+- name: fzf | install fzf
+  command: "{{ fzf_destination }}/install"
+  args:
+    chdir: "{{ fzf_destination }}"
