@@ -1,4 +1,4 @@
 ---
-fzf_version: 0.17.5
+fzf_version: 0.18.0
 fzf_url: https://github.com/junegunn/fzf.git
 fzf_destination: ~/.fzf
