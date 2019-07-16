@@ -1,9 +1,8 @@
 ---
 - name: kind | download and install kind
-  unarchive:
-    src: "{{ kind_url }}"
+  get_url:
+    url: "{{ kind_url }}"
     dest: "{{ kind_destination }}"
-    remote_src: yes
     owner: root
     group: root
     mode: 755
