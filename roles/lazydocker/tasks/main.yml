@@ -1,7 +1,7 @@
 ---
 - name: lazydocker | download and install lazydocker
   unarchive:
-    src: "{{ llazydocker_url }}"
+    src: "{{ lazydocker_url }}"
     dest: "{{ lazydocker_destination }}"
     remote_src: yes
     owner: root
