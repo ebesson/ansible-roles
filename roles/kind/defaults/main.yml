@@ -1,0 +1,4 @@
+---
+kind_version: v0.4.0
+kind_url: https://github.com/kubernetes-sigs/kind/releases/download/{{ kind_version }}/kind-linux-amd64
+kind_destination: /usr/local/bin
