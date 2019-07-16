@@ -23,6 +23,9 @@
     - dbeaver
     - drawio
     - intellj
+    - kind
+    - k9s
+    - lazydocker
     - lazygit
   # - maven
     - powerline-go
