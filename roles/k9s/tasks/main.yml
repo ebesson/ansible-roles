@@ -1,0 +1,11 @@
+---
+- name: k9s| download and install k9s
+  unarchive:
+    src: "{{ k9s_url }}"
+    dest: "{{ k9s_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 755
+  tags:
+    - k9s
