@@ -1,4 +1,4 @@
 ---
 lazydocker_version: 0.5.5
-layzdocker_url: https://github.com/jesseduffield/lazydocker/releases/download/v{{ lazydocker_version }}/lazydocker_{{ lazydocker_version }}_Linux_x86.tar.gz
+lazydocker_url: https://github.com/jesseduffield/lazydocker/releases/download/v{{ lazydocker_version }}/lazydocker_{{ lazydocker_version }}_Linux_x86.tar.gz
 lazydocker_destination: /usr/local/bin
