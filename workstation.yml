@@ -21,7 +21,7 @@
     - chezmoi
   # - docker
     - fzf
-    - java
+  # - java
     - dbeaver
     - drawio
     - intellj
