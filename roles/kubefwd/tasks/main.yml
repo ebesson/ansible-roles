@@ -1,0 +1,11 @@
+---
+- name: kubefwd| download and install kubefwd
+  unarchive:
+    src: "{{ kubefwd_url }}"
+    dest: "{{ kubefwd_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 755
+  tags:
+    - kubefwd
