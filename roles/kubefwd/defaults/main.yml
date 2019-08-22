@@ -1,4 +1,4 @@
 ---
-kubefwd_version: 1.8.3
+kubefwd_version: 1.9.0
 kubefwd_url: https://github.com/txn2/kubefwd/releases/download/v{{ kubefwd_version }}/kubefwd_linux_amd64.tar.gz
 kubefwd_destination: /usr/local/bin
