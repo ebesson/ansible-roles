@@ -1,0 +1,6 @@
+---
+- name: octant | download and install octant
+  apt:
+    deb: "{{ octant_url }}"
+  tags:
+    - octant
