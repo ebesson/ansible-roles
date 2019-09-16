@@ -2,6 +2,8 @@
 sudo: required
 dist: xenial
 language: python
+python:
+  - 3.6
 cache:
   pip: true
 before_install:
@@ -17,11 +19,5 @@ before_install:
   - sudo lxd init --auto
   - sudo mkdir -p /var/lib/lxd
   - sudo ln -s /var/snap/lxd/common/lxd/unix.socket /var/lib/lxd/unix.socket
-install:
-  - sudo pip install -U pip
-  - sudo pip uninstall -y pyOpenSSL
-  - sudo pip install -U cryptography==2.6.1
-  - sudo pip install --ignore-installed PyYAML
-  - sudo pip install molecule==2.19.0
 script:
-  - sudo molecule converge
+  - sudo tox -e ci
