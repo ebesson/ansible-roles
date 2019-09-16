@@ -19,5 +19,7 @@ before_install:
   - sudo lxd init --auto
   - sudo mkdir -p /var/lib/lxd
   - sudo ln -s /var/snap/lxd/common/lxd/unix.socket /var/lib/lxd/unix.socket
+install:
+  - sudo pip install tox
 script:
   - sudo tox -e ci
