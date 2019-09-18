@@ -1,3 +1,3 @@
 ---
-octant_version: 0.6.0
+octant_version: 0.7.0
 octant_url: https://github.com/vmware/octant/releases/download/v{{ octant_version }}/octant_{{ octant_version }}_Linux-64bit.deb
