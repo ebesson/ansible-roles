@@ -1,25 +1,13 @@
 ---
-
 - name: Create
   hosts: localhost
-  connection: local
-  gather_facts: False
-  no_log: "{{ not lookup('env', 'MOLECULE_DEBUG') | bool }}"
+  gather_facts: true
   vars:
-    molecule_file: "{{ lookup('env', 'MOLECULE_FILE') }}"
-    molecule_yml: "{{ lookup('file', molecule_file) | from_yaml }}"
+    footloose_image: "{{ lookup('env','FOOTLOOSE_IMAGE') or 'quay.io/footloose/ubuntu18.04' }} "
   tasks:
-    - name: Create molecule instance(s)
-      lxd_container:
-        name: "{{ item.name }}"
-        state: started
-        source:
-          type: image
-          mode: pull
-          server: https://images.linuxcontainers.org
-          protocol: lxd
-          alias: ubuntu/xenial/amd64
-        profiles: ["default"]
-        wait_for_ipv4_addresses: True
-        timeout: 600
-      with_items: "{{ molecule_yml.platforms }}"
+    - name: create footloose configuration
+      template:
+        src: templates/footloose.yaml.j2
+        dest: "{{ playbook_dir }}/footloose.yaml"
+    - name: create vm
+      shell: footloose create

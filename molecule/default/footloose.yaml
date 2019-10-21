@@ -1,0 +1,13 @@
+---
+cluster:
+  name: workstation
+  privateKey: cluster-key
+machines:
+- count: 1
+  spec:
+    backend: docker
+    image: quay.io/footloose/ubuntu18.04 
+    name: node%d
+    privileged: true
+    portMappings:
+    - containerPort: 22

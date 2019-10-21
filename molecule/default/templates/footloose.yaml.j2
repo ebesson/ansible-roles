@@ -1,0 +1,13 @@
+---
+cluster:
+  name: workstation
+  privateKey: cluster-key
+machines:
+- count: 1
+  spec:
+    backend: docker
+    image: {{ footloose_image }}
+    name: node%d
+    privileged: true
+    portMappings:
+    - containerPort: 22

@@ -1,4 +1,6 @@
 extends: default
+ignore: |
+  footloose.yaml
 
 rules:
   braces:

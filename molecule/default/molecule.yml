@@ -3,11 +3,11 @@ dependency:
   name: galaxy
   enabled: False
 driver:
-  name: lxd
+  name: docker
 lint:
   name: yamllint
 platforms:
-  - name: workstation
+  - name: workstation-node0
     groups:
       - molecule
       - all
