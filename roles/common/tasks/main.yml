@@ -20,6 +20,7 @@
      - libffi-dev
      - libssl-dev
      - sshpass
+     - zeal
   when: ansible_os_family == 'Debian'
   tags:
      - role::common
