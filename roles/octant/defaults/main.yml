@@ -1,3 +1,3 @@
 ---
-octant_version: 0.9.0
+octant_version: 0.9.1
 octant_url: https://github.com/vmware-tanzu/octant/releases/download/v{{ octant_version }}/octant_{{ octant_version }}_Linux-64bit.deb
