@@ -17,6 +17,7 @@
   roles:
     - common
     - chezmoi
+    - dive
   # - docker
     - fzf
   # - java

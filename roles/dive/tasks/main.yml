@@ -1,0 +1,11 @@
+---
+- name: dive| download and install dive
+  unarchive:
+    src: "{{ dive_url }}"
+    dest: "{{ dive_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 755
+  tags:
+    - dive
