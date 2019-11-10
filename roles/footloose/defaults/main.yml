@@ -1,0 +1,4 @@
+---
+footloose_version: 0.6.2
+footloose_url: https://github.com/weaveworks/footloose/releases/download/{{ footloose_version }}/footloose-{{ footloose_version }}-linux-x86_64
+footloose_destination: /usr/local/bin

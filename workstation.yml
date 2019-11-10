@@ -20,6 +20,7 @@
     - dive
   # - docker
     - fzf
+    - footloose
   # - java
     - dbeaver
     - drawio
