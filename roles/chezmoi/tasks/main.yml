@@ -2,10 +2,10 @@
 - name: chezmoi| download and install chezmoi
   unarchive:
     src: "{{ chezmoi_url }}"
-    dest: "{{ chezmoi_destination }}"
+    dest: "{{ chezmoi_destination }}"
     remote_src: yes
     owner: root
     group: root
-    mode: 755
+    mode: 0755
   tags:
     - chezmoi

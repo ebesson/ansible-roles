@@ -5,7 +5,6 @@
       become: yes
       apt:
         name: "{{ item }}"
-        state: latest
         update_cache: yes
       with_items:
         - wget
@@ -18,21 +17,21 @@
     - common
     - chezmoi
     - dive
-  # - docker
+    #   - docker
     - fzf
     - footloose
-  # - java
-    - dbeaver
-    - drawio
-    - intellj
+    #  - java
+    #  - dbeaver
+    #  - drawio
+    #  - intellj
     - kind
     - kubefwd
     - k9s
     - lazydocker
     - lazygit
-  # - maven
+    #  - maven
     - octant
     - powerline-go
-    - pycharm
+    #  - pycharm
     - sshed
-    - vscodium
+    #  - vscodium

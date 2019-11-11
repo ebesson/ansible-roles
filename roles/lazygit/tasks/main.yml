@@ -2,10 +2,10 @@
 - name: lazygit | download and install lazygit
   unarchive:
     src: "{{ layzgit_url }}"
-    dest: "{{ lazygit_destination }}"
+    dest: "{{ lazygit_destination }}"
     remote_src: yes
     owner: root
     group: root
-    mode: 755
+    mode: 0755
   tags:
     - lazygit

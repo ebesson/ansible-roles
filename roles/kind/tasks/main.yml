@@ -2,9 +2,9 @@
 - name: kind | download and install kind
   get_url:
     url: "{{ kind_url }}"
-    dest: "{{ kind_destination }}"
+    dest: "{{ kind_destination }}"
     owner: root
     group: root
-    mode: 755
+    mode: 0755
   tags:
     - kind

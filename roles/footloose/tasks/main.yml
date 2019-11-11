@@ -2,7 +2,7 @@
 - name: footloose | download and install footloose
   get_url:
     url: "{{ footloose_url }}"
-    dest: "{{ footloose_destination }}"
+    dest: "{{ footloose_destination }}"
     owner: root
     group: root
     mode: 755
