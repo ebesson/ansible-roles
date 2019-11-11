@@ -1,9 +1,8 @@
 ---
 - name: footloose | download and install footloose
-  unarchive:
-    src: "{{ footloose_url }}"
+  get_url:
+    url: "{{ footloose_url }}"
     dest: "{{ footloose_destination }}"
-    remote_src: yes
     owner: root
     group: root
     mode: 755
