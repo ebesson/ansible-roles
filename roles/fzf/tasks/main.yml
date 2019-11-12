@@ -9,4 +9,4 @@
   command: "{{ fzf_destination }}/install"
   args:
     chdir: "{{ fzf_destination }}"
-  change_when: no
+ 
