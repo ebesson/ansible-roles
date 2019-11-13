@@ -6,6 +6,6 @@
     version: "{{ fzf_version }}"
 
 - name: fzf | install fzf
-  command: "{{ fzf_destination }}/install"
+  shell: "{{ fzf_destination }}/install"
   args:
     chdir: "{{ fzf_destination }}"
