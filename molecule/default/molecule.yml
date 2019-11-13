@@ -16,7 +16,7 @@ provisioner:
   lint:
     name: ansible-lint
     options:
-      x: ["301"]
+      x: ["301", "305"]
   env:
     ANSIBLE_ROLES_PATH: ../../roles
   playbooks:
