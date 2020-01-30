@@ -14,7 +14,7 @@
         - unzip
       when: ansible_os_family == 'Debian'
   roles:
-    - common
+    # - common
     - chezmoi
     - dive
     #   - docker
