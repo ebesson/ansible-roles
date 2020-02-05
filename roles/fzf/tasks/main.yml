@@ -1,4 +1,10 @@
 ---
+- name: fzf | ensure git is present
+  apt:
+    name: git
+    state: present
+    update_cache: yes
+
 - name: fzf | retrieve fzf
   git:
     repo: "{{ fzf_url }}"
