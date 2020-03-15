@@ -1,0 +1,3 @@
+---
+- name: rename binary
+  command: mv /usr/local/bin/exa-linux-x86_64 /usr/local/bin/exa

@@ -18,7 +18,8 @@
     - bat
     - chezmoi
     - dive
-    #   - docker
+    # - docker
+    - exa
     - fzf
     - footloose
     #  - java

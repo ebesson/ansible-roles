@@ -1,0 +1,15 @@
+---
+- name: exa | download and install exa
+  unarchive:
+    src: "{{ exa_url }}"
+    dest: "{{ exa_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  notify: rename binary
+  tags:
+    - exa
+
+- name: exa | flush handlers
+  meta: flush_handlers
