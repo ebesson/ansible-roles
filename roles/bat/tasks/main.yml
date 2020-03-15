@@ -1,0 +1,7 @@
+---
+- name: bat| download and install bat
+  apt:
+    deb: "{{ bat_url }}"
+    state: present
+  tags:
+    - bat
