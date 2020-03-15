@@ -1,0 +1,11 @@
+---
+- name: ytop | download and install ytop
+  unarchive:
+    src: "{{ ytop_url }}"
+    dest: "{{ ytop_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - ytop

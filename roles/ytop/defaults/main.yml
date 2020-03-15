@@ -1,0 +1,4 @@
+---
+ytop_version: 0.5.1
+ytop_url: "https://github.com/cjbassi/ytop/releases/download/{{ ytop_version }}/ytop-{{ ytop_version }}-x86_64-unknown-linux-gnu.tar.gz"
+ytop_destination: /usr/local/bin
