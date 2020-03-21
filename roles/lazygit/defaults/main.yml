@@ -1,4 +1,4 @@
 ---
-lazygit_version: 0.15.3
+lazygit_version: 0.17.0
 layzgit_url: https://github.com/jesseduffield/lazygit/releases/download/v{{ lazygit_version }}/lazygit_{{ lazygit_version }}_Linux_x86_64.tar.gz
 lazygit_destination: /usr/local/bin
