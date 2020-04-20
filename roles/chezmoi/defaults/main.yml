@@ -1,4 +1,4 @@
 ---
-chezmoi_version: 1.6.1
+chezmoi_version: 1.8.0
 chezmoi_url: https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version }}/chezmoi_{{ chezmoi_version }}_linux_amd64.tar.gz
 chezmoi_destination: /usr/local/bin
