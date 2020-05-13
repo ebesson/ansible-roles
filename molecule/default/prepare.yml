@@ -8,3 +8,15 @@
       raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
       become: true
       changed_when: false
+    - name: Install base packages
+      become: true
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      with_items:
+        - wget
+        - curl
+        - python-pip
+        - tar
+        - unzip
+      when: ansible_os_family == 'Debian'

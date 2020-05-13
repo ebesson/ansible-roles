@@ -1,18 +1,5 @@
 ---
 - hosts: all
-  pre_tasks:
-    - name: Install bases packages with apt
-      become: yes
-      apt:
-        name: "{{ item }}"
-        update_cache: yes
-      with_items:
-        - wget
-        - curl
-        - python-pip
-        - tar
-        - unzip
-      when: ansible_os_family == 'Debian'
   roles:
     # - common
     - bat
