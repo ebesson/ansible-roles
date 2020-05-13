@@ -2,26 +2,26 @@
 - hosts: all
   roles:
     # - common
-    - bat
-    - chezmoi
-    - dive
+    - {role: bat, tags: ['bat']}
+    - {role: chezmoi, tags: ['chezmoi']}
+    - {role: dive, tags: ['dive']}
     # - docker
-    - exa
-    - fzf
-    - footloose
+    - {role: exa, tags: ['exa']}
+    - {role: fzf, tags: ['fzf']}
+    - {role: footloose, tags: ['footloose']}
     #  - java
     #  - dbeaver
-    - drawio
+    - {role: drawio, tags: ['drawio']}
     #  - intellj
-    - kind
-    - kubefwd
-    - k9s
-    - lazydocker
-    - lazygit
+    - {role: kind, tags: ['kind']}
+    - {role: kubefwd, tags: ['kubefwd']}
+    - {role: k9s, tags: ['k9s']}
+    - {role: lazydocker, tags: ['lazydocker']}
+    - {role: lazygit, tags: ['lazygit']}
     #  - maven
-    - octant
-    - powerline-go
+    - {role: octant, tags: ['octant']}
+    - {role: powerline-go, tags: ['powerline-go']}
     #  - pycharm
-    - sshed
-    - vscodium
-    - ytop
+    - {role: sshed, tags: ['sshed']}
+    - {role: vscodium, tags: ['vscodium']}
+    - {role: ytop, tags: ['ytop']}
