@@ -1,2 +1,2 @@
 tox
-tox && source .tox/py3-ansible/bin/activate
+source .tox/py3/bin/activate
