@@ -16,6 +16,7 @@
     - {role: kind, tags: ['kind']}
     - {role: kubefwd, tags: ['kubefwd']}
     - {role: k9s, tags: ['k9s']}
+    - {role: kubectl, tags: ['kubectl']}
     - {role: lazydocker, tags: ['lazydocker']}
     - {role: lazygit, tags: ['lazygit']}
     #  - maven

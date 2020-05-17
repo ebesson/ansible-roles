@@ -1,0 +1,8 @@
+---
+- name: kubectl | download and install kubectl
+  get_url:
+    url: "{{ kubectl_url }}"
+    dest: "{{ kubectl_destination }}"
+    owner: root
+    group: root
+    mode: 0755

@@ -1,0 +1,4 @@
+---
+kubectl_version: 1.15.12
+kubectl_url: "https://storage.googleapis.com/kubernetes-release/release/v{{ kubectl_version }}/bin/linux/amd64/kubectl"
+kubectl_destination: /usr/local/bin
