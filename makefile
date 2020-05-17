@@ -23,7 +23,7 @@ ANSIBLE=. .tox/py3/bin/activate && ansible-playbook workstation.yml --inventory 
 help: ## Display help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-bootstrap: ## Installs dependencies needed to run playbook
+prepare: ## Install dependencies needed to run playbook
 	@tox
 	sudo apt update 
 	sudo apt install wget curl tar unzip
