@@ -21,6 +21,7 @@
     - {role: lazygit, tags: ['lazygit']}
     #  - maven
     - {role: octant, tags: ['octant']}
+    - {role: popeye, tags: ['popeye']}
     - {role: powerline-go, tags: ['powerline-go']}
     #  - pycharm
     - {role: sshed, tags: ['sshed']}
