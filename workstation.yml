@@ -23,6 +23,7 @@
     - {role: octant, tags: ['octant']}
     - {role: popeye, tags: ['popeye']}
     - {role: powerline-go, tags: ['powerline-go']}
+    - {role: pluto, tags: ['pluto']}
     #  - pycharm
     - {role: sshed, tags: ['sshed']}
     - {role: vscodium, tags: ['vscodium']}

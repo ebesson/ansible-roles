@@ -1,0 +1,11 @@
+---
+- name: pluto | download and install pluto
+  unarchive:
+    src: "{{ pluto_url }}"
+    dest: "{{ pluto_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - pluto
