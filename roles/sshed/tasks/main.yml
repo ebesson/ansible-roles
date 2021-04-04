@@ -1,10 +1,6 @@
 ---
 - name: sshed | download and install sshed
-  get_url:
-    url: "{{ sshed_url }}"
-    dest: "{{ sshed_destination }}"
-    owner: root
-    group: root
-    mode: 755
+  apt:
+    deb: "{{ sshed_url }}"
   tags:
     - sshed
