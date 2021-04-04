@@ -1,17 +1,11 @@
 ---
-- name: fzf | ensure git is present
-  apt:
-    name: git
-    state: present
-    update_cache: yes
-
-- name: fzf | retrieve fzf
-  git:
-    repo: "{{ fzf_url }}"
+- name: fzf | download and install fzf
+  unarchive:
+    src: "{{ fzf_url }}"
     dest: "{{ fzf_destination }}"
-    version: "{{ fzf_version }}"
-
-- name: fzf | install fzf
-  shell: "{{ fzf_destination }}/install"
-  args:
-    chdir: "{{ fzf_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - fzf
