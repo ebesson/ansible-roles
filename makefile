@@ -23,10 +23,11 @@ ANSIBLE=. .tox/py3/bin/activate && ansible-playbook workstation.yml --inventory 
 help: ## Display help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-prepare: ## Install dependencies needed to run playbook
+prepare: ## Install dependencies needed to run this playbook
+	@sudo apt update 
+	@sudo apt install -y wget curl tar unzip python3 python3-dev python3-pip python3-apt
+	@sudo pip3 install tox
 	@tox
-	sudo apt update 
-	sudo apt install wget curl tar unzip
 
 check: ## Checks workstation.yml playbook
 	@$(ANSIBLE) --check
@@ -35,7 +36,7 @@ list: ## List all available tags
 	@$(ANSIBLE) --list-tags
 
 install: ## Run workstation.yml playbook with tags
-	@echo $(ANSIBLE) --tags=$(COMMAND_ARGS)
+	@$(ANSIBLE) --tags=$(COMMAND_ARGS)
 
 all: ## Install everything from workstation.yml playbook
 	@echo $(ANSIBLE)
