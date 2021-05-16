@@ -1,0 +1,6 @@
+---
+- name: taskctl | download and install taskctl
+  apt:
+    deb: "{{ taskctl_package_url }}"
+  tags:
+    - taskctl
