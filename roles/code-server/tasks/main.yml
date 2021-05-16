@@ -1,0 +1,6 @@
+---
+- name: code-server | download and install taskctl
+  apt:
+    deb: "{{ code_server_package_url }}"
+  tags:
+    - code-server

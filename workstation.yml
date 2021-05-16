@@ -4,6 +4,7 @@
     # - common
     - {role: bat, tags: ['bat']}
     - {role: chezmoi, tags: ['chezmoi']}
+    - {role: code-server, tags: ['code-server']}
     - {role: dive, tags: ['dive']}
     # - docker
     - {role: exa, tags: ['exa']}
