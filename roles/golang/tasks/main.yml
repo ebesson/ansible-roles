@@ -1,0 +1,36 @@
+---
+
+- name: golang | Download golang installer
+  get_url:
+    dest: "/tmp/golang.tar.gz"
+    url: "{{ golang_url }}"
+
+- name: golang | Unarchive golang installer
+  become: yes
+  unarchive:
+    src: "/tmp/golang.tar.gz"
+    dest: /usr/local/
+    remote_src: yes
+
+- name: golang | Create go directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0770"
+    owner: "{{ lookup('env','USER') }}"
+    group: "{{ lookup('env','USER') }}"
+  loop:
+    - "{{ lookup('env','HOME') }}/go"
+    - "{{ lookup('env','HOME') }}/go/src"
+    - "{{ lookup('env','HOME') }}/go/bin"
+
+- name: golang | Update PATH
+  lineinfile:
+    path: "{{ lookup('env','HOME') }}/.profile"
+    line: 'export GOPATH=$HOME/go'
+    state: present
+  loop:
+    - 'export GOPATH=$HOME/go'
+    - 'export GOROOT=/usr/local/go'
+    - 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin'
+  notify: reload profile

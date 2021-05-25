@@ -1,0 +1,4 @@
+---
+- name: reload profile
+  debug:
+    msg: "Execute the follwing command: source ~/.profile"
