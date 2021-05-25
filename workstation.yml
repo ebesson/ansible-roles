@@ -21,6 +21,7 @@
     - {role: kubectl, tags: ['kubectl']}
     - {role: lazydocker, tags: ['lazydocker']}
     - {role: lazygit, tags: ['lazygit']}
+    - {role: lens, tags: ['lens']}
     #  - maven
     - {role: octant, tags: ['octant']}
     - {role: popeye, tags: ['popeye']}

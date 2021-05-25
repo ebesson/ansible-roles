@@ -1,0 +1,4 @@
+---
+- name: lens | download and install lens
+  apt:
+    deb: "{{ lens_package_url }}"
