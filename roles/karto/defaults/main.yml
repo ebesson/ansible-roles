@@ -1,0 +1,4 @@
+---
+karto_version: v1.6.0
+karto_url: "https://github.com/Zenika/karto/releases/download/{{ karto_version }}/karto"
+karto_destination: /usr/local/bin
