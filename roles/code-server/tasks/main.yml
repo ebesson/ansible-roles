@@ -1,5 +1,5 @@
 ---
-- name: code-server | download and install code-server 
+- name: code-server | download and install code-server
   apt:
     deb: "{{ code_server_package_url }}"
   tags:
