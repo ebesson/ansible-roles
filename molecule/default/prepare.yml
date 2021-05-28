@@ -20,3 +20,14 @@
         - tar
         - unzip
       when: ansible_os_family == 'Debian'
+    - name: ensure user travis exists
+      ansible.builtin.user:
+        name: travis
+        create_home: yes
+        state: present
+    - name: ensure file "/home/travis/.profile" exists
+      file:
+        name: "/home/travis/.profile"
+        state: touch
+        owner: "travis"
+        mode: 0600
