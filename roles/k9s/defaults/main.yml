@@ -1,4 +1,4 @@
 ---
-k9s_version: v0.24.10
+k9s_version: v0.24.15
 k9s_url: https://github.com/derailed/k9s/releases/download/{{ k9s_version }}/k9s_{{ k9s_version }}_Linux_x86_64.tar.gz
 k9s_destination: /usr/local/bin
