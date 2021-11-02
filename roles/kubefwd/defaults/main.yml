@@ -1,3 +1,3 @@
 ---
-kubefwd_version: 1.18.1
+kubefwd_version: 1.22.0
 kubefwd_url: "https://github.com/txn2/kubefwd/releases/download/{{ kubefwd_version }}/kubefwd_amd64.deb"
