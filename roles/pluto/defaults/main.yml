@@ -1,4 +1,4 @@
 ---
-pluto_version: 4.0.6
+pluto_version: 5.5.3
 pluto_url: "https://github.com/FairwindsOps/pluto/releases/download/v{{ pluto_version }}/pluto_{{ pluto_version }}_linux_amd64.tar.gz"
 pluto_destination: /usr/local/bin
