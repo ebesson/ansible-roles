@@ -9,3 +9,4 @@
 ## Developement status
 
 [![Build Status](https://travis-ci.org/ebesson/ansible-roles.svg?branch=master)](https://travis-ci.org/ebesson/ansible-roles/)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#hhttps://github.com/ebesson/ansible-roles)
