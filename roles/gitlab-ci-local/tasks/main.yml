@@ -1,0 +1,9 @@
+---
+- name: gitlab-ci-local | download and install gitlab-ci-local
+  unarchive:
+    src: "{{ gitlab_ci_local_package_url }}"
+    dest: "{{ gitlab_ci_local_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
