@@ -1,9 +1,15 @@
 ---
-- name: gitlab-ci-local | download and install gitlab-ci-local
-  unarchive:
-    src: "{{ gitlab_ci_local_package_url }}"
-    dest: "{{ gitlab_ci_local_destination }}"
-    remote_src: yes
+- name: gitlab-ci-local | download gitlab-ci-local
+  get_url:
+    url: "{{ gitlab_ci_local_package_url }}"
+    dest: /tmp/linux.gz
+
+- name: gitlab-ci-local | install gitlab-ci-local
+  shell: "gunzip --stdout /tmp/linux.gz > {{ gitlab_ci_local_destination }}"
+
+- name: gitlab-ci-local | install gitlab-ci-local
+  file:
+    path: /usr/local/bin/gitlab-ci-local
     owner: root
     group: root
-    mode: 0755
+    mode: 0655
