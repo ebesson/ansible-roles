@@ -23,6 +23,7 @@
     - {role: lazydocker, tags: ['lazydocker']}
     - {role: lazygit, tags: ['lazygit']}
     - {role: lens, tags: ['lens']}
+    - {role: gitlab-ci-local, tags: ['gitlab-ci-local']}
     - {role: golang, tags: ['golang']}
     #  - maven
     - {role: octant, tags: ['octant']}
