@@ -1,0 +1,3 @@
+---
+marp_cli_package_url: https://github.com/marp-team/marp-cli/releases/download/v2.0.4/marp-cli-v2.0.4-linux.tar.gz
+marp_cli_destination: /usr/local/bin

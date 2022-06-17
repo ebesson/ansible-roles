@@ -1,0 +1,9 @@
+---
+- name: marp-cli | download and install marp-cli
+  unarchive:
+    src: "{{ marp_cli_package_url }}"
+    dest: "{{ marp_cli_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0755
