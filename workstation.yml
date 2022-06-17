@@ -14,6 +14,7 @@
     #  - dbeaver
     - {role: drawio, tags: ['drawio']}
     #  - intellj
+    - {role: glab, tags: ['glab']}
     - {role: karto, tags: ['karto']}
     - {role: kind, tags: ['kind']}
     - {role: kubefwd, tags: ['kubefwd']}
