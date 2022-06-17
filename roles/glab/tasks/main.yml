@@ -1,0 +1,4 @@
+---
+- name: glab | download and install glab
+  apt:
+    deb: "{{ glab_package_url }}"
