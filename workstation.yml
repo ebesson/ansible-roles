@@ -25,6 +25,7 @@
     - {role: lens, tags: ['lens']}
     - {role: gitlab-ci-local, tags: ['gitlab-ci-local']}
     - {role: golang, tags: ['golang']}
+    - {role: marp-cli, tags: ['marp-cli']}
     #  - maven
     - {role: octant, tags: ['octant']}
     - {role: popeye, tags: ['popeye']}
