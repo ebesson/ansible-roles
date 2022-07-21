@@ -41,7 +41,7 @@ jobs:
     strategy:
       matrix:
         distro:
-          - debian1O
+          - debian10
 
     steps:
       - name: Check out the codebase.
