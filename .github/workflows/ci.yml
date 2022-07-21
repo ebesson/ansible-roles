@@ -58,7 +58,7 @@ jobs:
         run: pip3 install ansible molecule[docker] docker ansible-lint
 
       - name: Run Molecule tests.
-        run: molecule lint
+        run: molecule converge
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
