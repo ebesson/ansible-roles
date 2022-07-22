@@ -1,0 +1,4 @@
+---
+sshs_version: "3.3.0"
+sshs_url: https://github.com/quantumsheep/sshs/releases/download/{{ sshs_version }}/sshs-linux-amd64
+sshs_destination: /usr/local/bin

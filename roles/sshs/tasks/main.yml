@@ -1,0 +1,10 @@
+---
+- name: sshs | download and install sshs
+  get_url:
+    url: "{{ sshs_url }}"
+    dest: "{{ sshs_destination }}/sshs"
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - sshs
