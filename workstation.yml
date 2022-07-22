@@ -33,6 +33,7 @@
     - {role: pluto, tags: ['pluto']}
     #  - pycharm
     - {role: sshed, tags: ['sshed']}
+    - {role: sshs, tags: ['sshs']}
     - {role: taskctl, tags: ['taskctl']}
     - {role: vscodium, tags: ['vscodium']}
     - {role: ytop, tags: ['ytop']}
