@@ -1,0 +1,10 @@
+---
+- name: ara | launch ara container
+  docker_container:
+    image: "{{ ara_docker_image }}"
+    shm_size: 512M
+    name: ara
+    state: present
+    restart_policy: always
+    exposed_ports:
+      - 8000:8000
