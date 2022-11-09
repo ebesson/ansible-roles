@@ -55,7 +55,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install test dependencies.
-        run: pip3 install ansible molecule[docker] docker ansible-lint
+        run: pip3 install ansible molecule==3.5.* molecule[docker] docker ansible-lint
 
       - name: Run Molecule tests.
         run: molecule converge
