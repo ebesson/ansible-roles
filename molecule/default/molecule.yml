@@ -6,7 +6,7 @@ dependency:
 driver:
   name: docker
 lint: |
-  ansible-lint .
+  yamllint --config-file=.yamllint .
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian10}-ansible:latest"
