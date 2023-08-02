@@ -1,0 +1,4 @@
+---
+aqua_version: "v2.11.0-4"
+aqua_url: "https://github.com/aquaproj/aqua/releases/download/{{ aqua_version }}/aqua_linux_amd64.tar.gz"
+aqua_destination: /usr/local/bin

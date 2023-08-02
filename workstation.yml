@@ -2,6 +2,7 @@
 - hosts: all
   roles:
     # - common
+    - {role: aqua, tags: ['aqua']}
     - {role: bat, tags: ['bat']}
     - {role: chezmoi, tags: ['chezmoi']}
     - {role: code-server, tags: ['code-server']}

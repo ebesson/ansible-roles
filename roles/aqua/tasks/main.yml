@@ -1,0 +1,11 @@
+---
+- name: aqua | download and install aqua
+  unarchive:
+    src: "{{ aqua_url }}"
+    dest: "{{ aqua_destination }}"
+    remote_src: yes
+    owner: root
+    group: root
+    mode: 0655
+  tags:
+    - aqua
