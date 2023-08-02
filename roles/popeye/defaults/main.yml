@@ -1,4 +1,4 @@
 ---
-popeye_version: 0.10.1
+popeye_version: 0.11.1
 popeye_url: https://github.com/derailed/popeye/releases/download/v{{ popeye_version }}/popeye_Linux_x86_64.tar.gz
 popeye_destination: /usr/local/bin
