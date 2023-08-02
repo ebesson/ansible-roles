@@ -1,0 +1,6 @@
+---
+- name: task | download and install task
+  apt:
+    deb: "{{ task_package_url }}"
+  tags:
+    - task
