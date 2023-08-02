@@ -1,4 +1,4 @@
 ---
-gitlab_ci_local_version: 4.35.0
+gitlab_ci_local_version: 4.42.0
 gitlab_ci_local_package_url: "https://github.com/firecow/gitlab-ci-local/releases/download/{{ gitlab_ci_local_version }}/linux.gz"
 gitlab_ci_local_destination: /usr/local/bin/gitlab-ci-local
