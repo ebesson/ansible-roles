@@ -5,8 +5,6 @@ dependency:
   enabled: False
 driver:
   name: docker
-lint: |
-  yamllint --config-file=.yamllint .
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-debian10}-ansible:latest"
@@ -27,5 +25,3 @@ verifier:
   name: testinfra
   options:
     junit-xml: report.xml
-  lint:
-    name: flake8
